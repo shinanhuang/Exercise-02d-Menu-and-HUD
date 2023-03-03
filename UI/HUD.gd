@@ -31,5 +31,4 @@ func update_lives():
 	for i in range(Global.lives):
 		var indicator = Indicator.instance()
 		indicator.position = Vector2(lives_pos.x+i*lives_index, lives_pos.y)
-		add_child(indicator)
 		$Indicator_Containor.add_child(indicator)
