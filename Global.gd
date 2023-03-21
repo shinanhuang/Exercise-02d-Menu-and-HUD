@@ -1,14 +1,14 @@
 extends Node
 
-var VP = null
+var VP = Vector2.ZERO
 
 var score = 0
 var time = 0
 var lives = 0
 
 func _ready():
-	randomize()
 	pause_mode = Node.PAUSE_MODE_PROCESS
+	randomize()
 	VP = get_viewport().size
 	var _signal = get_tree().get_root().connect("size_changed",self,"_resize")
 	reset()
